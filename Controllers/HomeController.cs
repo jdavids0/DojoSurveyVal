@@ -18,10 +18,16 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost("process")]
-    public IActionResult FormSubmission(Survey survey)
+    [HttpPost("submit")]
+    public IActionResult Submit(Survey survey)
     {
-        return RedirectToAction ("Success", survey);
+        if(ModelState.IsValid){
+            return RedirectToAction ("Success", survey);
+        }
+        else 
+        {
+            return View("Index");
+        }
     }
 
     [HttpGet("success")]
