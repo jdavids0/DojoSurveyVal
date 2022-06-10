@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex flex-column justify-content-center border border-dark w-50">
+            <div class="ml-3">
+                <h4>Hello Ninja</h4>
+            </div>
+            <form action="process" method="post">
+                <div class="form-group mt-2 ml-3">
+                    <label for="Name">Your Name:</label>
+                    <input type="text" name="Name">
+                </div>
+                <div class="form-group ml-3">
+                    <label for="Language">Favorite Language:</label>
+                    <select name="Language" id="">
+                        <option value="none" selected disabled>Select a Language</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                        <option value="Old Norse">Old Norse</option>
+                    </select>
+                </div>
+                <div class="form-group ml-3">
+                    <label for="Location">Dojo Location:</label>
+                    <select name="Location" id="">
+                        <option value="none" selected disabled>Select a Location</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Miami">Miami</option>
+                        <option value="New York">New York</option>
+                    </select>
+                </div>
+                <div class="form-group ml-3">
+                    <label for="Comment">Comment (optional):</label><br>
+                    <textarea name="Comment" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="mb-3 mr-3 d-flex justify-content-end">
+                    <input type="submit" value="Submit" class="btn btn-info btn-outline-dark">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
